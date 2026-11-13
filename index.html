@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉLÉGANCE PARIS | Luxury Online Fashion & Haute Couture</title>
+  <meta name="description" content="Discover contemporary luxury fashion, haute couture dresses, tailored menswear, Italian leather bags, and designer watches at Élégance Paris.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon (Modern Crisp SVG Icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       2. Site Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-icon-btn mobile-toggle" onclick="openDrawer('mobileNavDrawer')" aria-label="Open mobile navigation">
+        <i class="ri-menu-2-line"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Homepage">
+        <img src="assets/logo_0967.webp" alt="Stackly Fashion Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="#categoriesSection" class="nav-link">Categories</a>
+        <a href="#newArrivalsSection" class="nav-link">New Arrivals</a>
+        <a href="#atelierSection" class="nav-link">Atelier</a>
+        <a href="#editorialSection" class="nav-link">Journal</a>
+        <a href="#offersSection" class="nav-link">Offers</a>
+      </nav>
+
+      <!-- Header Actions: Wishlist, Cart -->
+      <div class="nav-actions">
+
+        <!-- Wishlist Button -->
+        <button class="nav-icon-btn" onclick="openDrawer('wishlistDrawer')" title="Your Wishlist" aria-label="Wishlist">
+          <i class="ri-heart-3-line"></i>
+          <span class="badge-count wishlist-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Shopping Cart Button -->
+        <button class="nav-icon-btn" onclick="openDrawer('cartDrawer')" title="Shopping Bag" aria-label="Shopping Cart">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Login Button -->
+        <button class="nav-login-btn" id="navLoginBtn" onclick="openAuthModal()" aria-label="Account Login">
+          <i class="ri-user-3-line"></i>
+          <span id="navLoginText">Login</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       3. Hero Section with Fashion Banner
+       ========================================================================== -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-bg-accent"></div>
+    <div class="container hero-grid">
+      <!-- Hero Text Content -->
+      <div class="hero-content" data-aos="fade-right">
+        <div class="hero-subtitle">
+          <i class="ri-sparkle-fill"></i> SPRING / SUMMER 2026 EDIT
+        </div>
+        <h1 class="hero-title">
+          Timeless Elegance, <br>
+          <span>Modern Glamour.</span>
+        </h1>
+        <p class="hero-description">
+          Immerse yourself in our premier seasonal collection of haute couture dresses, artisanal leather goods, and refined luxury essentials designed in Paris.
+        </p>
+        <div class="hero-actions">
+          <a href="404.html" class="btn btn-primary">
+            <span>Explore Collection</span>
+            <i class="ri-arrow-right-line"></i>
+          </a>
+          <a href="404.html" class="btn btn-outline">
+            <span>View Seasonal Offers</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>50K+</h3>
+            <p>Discerning Clients</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Authentic Luxury</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9 &starf;</h3>
+            <p>Customer Rating</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Image with Floating Badges -->
+      <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero-model.webp" alt="Haute Couture Fashion Model">
+          
+          <!-- Floating Badge 1 -->
+          <div class="floating-badge badge-top">
+            <div class="badge-icon">
+              <i class="ri-vip-crown-fill"></i>
+            </div>
+            <div class="badge-text">
+              <strong>Atelier Exclusive</strong>
+              <span>Parisian Craftsmanship</span>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2 -->
+          <div class="floating-badge badge-bottom">
+            <div class="badge-icon">
+              <i class="ri-shield-check-fill"></i>
+            </div>
+            <div class="badge-text">
+              <strong>Complimentary Shipping</strong>
+              <span>On all luxury orders $150+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Trust / Value Proposition Strip
+       ========================================================================== -->
+  <section class="features-bar">
+    <div class="container features-grid">
+      <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+        <i class="ri-truck-line feature-icon"></i>
+        <div class="feature-info">
+          <h4>Complimentary Shipping</h4>
+          <p>Express courier delivery on orders $150+</p>
+        </div>
+      </div>
+      <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+        <i class="ri-shield-star-line feature-icon"></i>
+        <div class="feature-info">
+          <h4>Guaranteed Authenticity</h4>
+          <p>Certified genuine designer items</p>
+        </div>
+      </div>
+      <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+        <i class="ri-arrow-go-back-line feature-icon"></i>
+        <div class="feature-info">
+          <h4>30-Day Luxury Returns</h4>
+          <p>Hassle-free return policy</p>
+        </div>
+      </div>
+      <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+        <i class="ri-customer-service-2-line feature-icon"></i>
+        <div class="feature-info">
+          <h4>Concierge Support</h4>
+          <p>24/7 dedicated personal styling service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. Featured Categories (Minimum 4 categories)
+       ========================================================================== -->
+  <section class="categories-section" id="categoriesSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">CURATED DEPARTMENTS</span>
+        <h2 class="section-title">Explore Featured Categories</h2>
+        <p class="section-desc">From runway dresses to handcrafted leather accessories, discover the finest additions to your wardrobe.</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1: Dresses -->
+        <div class="category-card" onclick="window.location.href='404.html'" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/category-dresses.webp" alt="Haute Couture Dresses">
+          <div class="category-overlay">
+            <span class="cat-tag">HAUTE COUTURE</span>
+            <h3>Women's Dresses</h3>
+            <span class="cat-action">Shop Dresses <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </div>
+
+        <!-- Category 2: Leather Bags & Shoes -->
+        <div class="category-card" onclick="window.location.href='404.html'" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/category-bags.webp" alt="Designer Bags">
+          <div class="category-overlay">
+            <span class="cat-tag">LEATHER GOODS</span>
+            <h3>Designer Handbags</h3>
+            <span class="cat-action">Explore Bags <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </div>
+
+        <!-- Category 3: Luxury Watches -->
+        <div class="category-card" onclick="window.location.href='404.html'" data-aos="zoom-in" data-aos-delay="300">
+          <img src="assets/category-watches.webp" alt="Luxury Timepieces">
+          <div class="category-overlay">
+            <span class="cat-tag">HOROLOGY</span>
+            <h3>Luxury Watches</h3>
+            <span class="cat-action">View Watches <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </div>
+
+        <!-- Category 4: Beauty & Fragrances -->
+        <div class="category-card" onclick="window.location.href='404.html'" data-aos="zoom-in" data-aos-delay="400">
+          <img src="assets/category-fragrances.webp" alt="French Fragrances">
+          <div class="category-overlay">
+            <span class="cat-tag">BEAUTÉ</span>
+            <h3>Fragrances & Beauty</h3>
+            <span class="cat-action">Discover Scents <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. New Arrivals Section (Dynamic API data)
+       ========================================================================== -->
+  <section class="shop-section bg-alt" id="newArrivalsSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">FRESH OFF THE RUNWAY</span>
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-desc">Be the first to wear the season's most coveted statement silhouettes and accessories.</p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="newArrivalsGrid">
+        <!-- Rendered dynamically from DummyJSON via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. The Atelier & Parisian Craftsmanship Section
+       ========================================================================== -->
+  <section class="atelier-section" id="atelierSection">
+    <div class="container atelier-grid">
+      <!-- Story Content -->
+      <div class="atelier-content" data-aos="fade-right">
+        <span class="section-tag">HERITAGE &amp; SAVOIR-FAIRE</span>
+        <h2 class="section-title">The Art of Parisian Haute Couture</h2>
+        <p class="atelier-lead">
+          At STACKLY, every design begins with a passion for timeless silhouette architecture. In our heritage Parisian atelier, seasoned pattern makers and artisans merge centuries-old tailoring methods with forward-thinking ethical luxury.
+        </p>
+
+        <div class="atelier-pillars">
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="ri-leaf-line"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>100% Sustainable &amp; Traceable Materials</h4>
+              <p>We source certified organic silk, cruelty-free cashmere, and vegetable-tanned Tuscan calfskin.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="ri-scissors-2-line"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>Master Artisan Precision</h4>
+              <p>Over 250 handcrafted stitches and meticulous draping ensure an impeccable bespoke fit for every garment.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <i class="ri-recycle-line"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>Zero-Deadstock Micro Batches</h4>
+              <p>Limited edition numbered creations to eliminate waste and celebrate true exclusivity.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="404.html" class="btn btn-primary">
+          <span>Discover The Collection</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+      <!-- Visual Showcase with Floating Quality Seal -->
+      <div class="atelier-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="atelier-img-frame">
+          <img src="assets/atelier-craft.webp" alt="Artisan Craftsmanship at STACKLY Atelier Paris">
+          
+          <div class="atelier-seal">
+            <i class="ri-award-fill"></i>
+            <div>
+              <strong>Haute Couture Certified</strong>
+              <span>Handcrafted in Paris &bull; 100% Ethical</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. Special Offers & Promotions (Minimum 3 promotional offers)
+       ========================================================================== -->
+  <section class="offers-section" id="offersSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" style="color: var(--accent-light);">EXCLUSIVE PROMOTIONS</span>
+        <h2 class="section-title">Limited Time Privileges</h2>
+        <p class="section-desc">Unlock bespoke luxury savings with our seasonal promotional opportunities.</p>
+      </div>
+
+      <div class="offers-grid">
+        <!-- Offer 1: Flash Sale with Countdown Timer -->
+        <div class="offer-card flash-sale" data-aos="fade-right">
+          <div>
+            <span class="offer-badge"><i class="ri-flashlight-fill"></i> Flash Sale &bull; 40% OFF</span>
+            <h3>Parisian Summer Couture Sale</h3>
+            <p>Enjoy up to 40% off selected runway dresses and evening couture. Offer expires when the timer runs out!</p>
+
+            <div class="countdown-box">
+              <div class="countdown-label">Ends In:</div>
+              <div class="countdown-timer">
+                <div class="timer-slot">
+                  <div class="timer-num" id="timerHours">18</div>
+                  <div class="timer-text">Hours</div>
+                </div>
+                <div class="timer-slot">
+                  <div class="timer-num" id="timerMinutes">45</div>
+                  <div class="timer-text">Mins</div>
+                </div>
+                <div class="timer-slot">
+                  <div class="timer-num" id="timerSeconds">30</div>
+                  <div class="timer-text">Secs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="coupon-pill copy-coupon-btn" data-coupon="LUXE20">
+              <i class="ri-file-copy-line"></i> Code: <span>LUXE20</span> (Copy & Apply)
+            </button>
+          </div>
+        </div>
+
+        <!-- Offer 2: Weekend Chic BOGO Offer -->
+        <div class="offer-card bogo" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <span class="offer-badge">Special Perk</span>
+            <h3>Weekend Chic Accessories</h3>
+            <p>Buy any luxury handbag and receive 50% off on a designer silk scarf or leather wallet.</p>
+          </div>
+          <div>
+            <button class="coupon-pill copy-coupon-btn" data-coupon="CHIC50">
+              <i class="ri-file-copy-line"></i> Code: <span>CHIC50</span> (Copy & Apply)
+            </button>
+          </div>
+        </div>
+
+        <!-- Offer 3: VIP Club Perk -->
+        <div class="offer-card vip" data-aos="fade-left" data-aos-delay="200">
+          <div>
+            <span class="offer-badge">VIP Exclusive</span>
+            <h3>Complimentary Maison Perfume</h3>
+            <p>Receive a complimentary 50ml French artisanal Eau De Parfum with every order of $180 or more.</p>
+          </div>
+          <div>
+            <button class="coupon-pill copy-coupon-btn" data-coupon="FREESHIP">
+              <i class="ri-file-copy-line"></i> Code: <span>FREESHIP</span> (Copy & Apply)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. Curated Style Journal & Runway Lookbook Section
+       ========================================================================== -->
+  <section class="editorial-section" id="editorialSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">THE STACKLY JOURNAL</span>
+        <h2 class="section-title">Runway Insights &amp; Style Guide</h2>
+        <p class="section-desc">Curated style notes, silhouette pairings, and seasonal trends from our Parisian fashion editors.</p>
+      </div>
+
+      <div class="editorial-grid">
+        <!-- Story 1 -->
+        <article class="editorial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="editorial-thumb">
+            <img src="assets/editorial-1.webp" alt="The Art of Evening Drapes">
+            <span class="editorial-tag-pill">Haute Edit</span>
+          </div>
+          <div class="editorial-body">
+            <div class="editorial-meta">
+              <span><i class="ri-time-line"></i> 4 Min Read</span>
+              <span>&bull;</span>
+              <span>Style Guide</span>
+            </div>
+            <h3 class="editorial-title">The Art of Evening Drapes: Styling Silk Slits for Gala Season</h3>
+            <p class="editorial-excerpt">
+              Discover how to balance sweeping couture hems with minimalistic jewelry, natural wave tresses, and understated stilettos for effortless black-tie glam.
+            </p>
+            <a href="404.html" class="editorial-link">
+              <span>Read Story</span>
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="editorial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="editorial-thumb">
+            <img src="assets/editorial-2.webp" alt="Leather and Gold Accessories">
+            <span class="editorial-tag-pill">Accessories</span>
+          </div>
+          <div class="editorial-body">
+            <div class="editorial-meta">
+              <span><i class="ri-time-line"></i> 3 Min Read</span>
+              <span>&bull;</span>
+              <span>Capsule Wardrobe</span>
+            </div>
+            <h3 class="editorial-title">Leather &amp; Gold: Building an Unapologetic Luxury Capsule</h3>
+            <p class="editorial-excerpt">
+              From hand-stitched Tuscan calfskin totes to 18k rose gold Swiss timepieces, explore the foundational accents that elevate daily ensembles.
+            </p>
+            <a href="404.html" class="editorial-link">
+              <span>Read Story</span>
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="editorial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="editorial-thumb">
+            <img src="assets/editorial-3.webp" alt="French Perfume Layering Secrets">
+            <span class="editorial-tag-pill">Beauté</span>
+          </div>
+          <div class="editorial-body">
+            <div class="editorial-meta">
+              <span><i class="ri-time-line"></i> 5 Min Read</span>
+              <span>&bull;</span>
+              <span>Fragrance Edit</span>
+            </div>
+            <h3 class="editorial-title">Sensory Alchemy: The Secrets Behind Parisian Perfume Layering</h3>
+            <p class="editorial-excerpt">
+              Unveil the delicate technique of combining rare French black truffle top notes with bourbon vanilla and velvet amber for a signature scent trail.
+            </p>
+            <a href="404.html" class="editorial-link">
+              <span>Read Story</span>
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. Customer Testimonials (Minimum 3 reviews)
+       ========================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">TESTIMONIALS</span>
+        <h2 class="section-title">Words From Our Clients</h2>
+        <p class="section-desc">Read genuine experiences from fashion lovers and collectors across the globe.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="testimonial-stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The silk evening gown I ordered arrived in gorgeous bespoke Parisian packaging. The stitching, drape, and fabric quality exceeded every expectation. An absolute masterpiece!"
+            </p>
+          </div>
+          <div class="testimonial-user">
+            <img src="assets/testimonial-1.webp" alt="Camille Laurent" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <h4>Camille Laurent</h4>
+              <span><i class="ri-verified-badge-fill verified-icon"></i> Verified Buyer &bull; Paris</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="testimonial-stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              "My Italian calfskin leather bag feels like it belongs in the highest luxury boutiques of Milan. Exceptional concierge support and prompt express delivery to New York!"
+            </p>
+          </div>
+          <div class="testimonial-user">
+            <img src="assets/testimonial-2.webp" alt="Alexander Vance" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <h4>Alexander Vance</h4>
+              <span><i class="ri-verified-badge-fill verified-icon"></i> Verified Buyer &bull; New York</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <div class="testimonial-stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              "From the intuitive online shopping experience to the phenomenal rose gold timepiece, Élégance Paris defines modern haute couture. I will definitely be a lifelong patron."
+            </p>
+          </div>
+          <div class="testimonial-user">
+            <img src="assets/testimonial-3.webp" alt="Sophie Chen" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <h4>Sophie Chen</h4>
+              <span><i class="ri-verified-badge-fill verified-icon"></i> Verified Buyer &bull; Singapore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. Newsletter Subscription Section
+       ========================================================================== -->
+  <section class="newsletter-section" id="newsletterSection">
+    <div class="container">
+      <div class="newsletter-box" data-aos="zoom-in">
+        <div class="newsletter-info">
+          <span class="section-tag">JOIN THE MAISON</span>
+          <h2>Unlock 20% Off Your First Luxury Purchase</h2>
+          <p>Subscribe to receive privileged access to private seasonal trunk shows, exclusive runway previews, and private concierge invitations.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="input-group">
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email Address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="newsletter-privacy">
+            <i class="ri-lock-line"></i> By subscribing, you agree to our Privacy Policy. You can unsubscribe at any time.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Homepage">
+            <img src="assets/logo_0967.webp" alt="Stackly Fashion Logo" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about">
+            Crafting timeless ready-to-wear fashion, bespoke atelier dresses, and handcrafted luxury accessories with classic French elegance and modern flair.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">New Arrivals</a></li>
+            <li><a href="404.html">The Atelier Story</a></li>
+            <li><a href="404.html">Style Journal</a></li>
+            <li><a href="404.html">Seasonal Offers</a></li>
+            <li><a href="404.html">Runway Lookbook</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Haute Couture Dresses</a></li>
+            <li><a href="404.html">Italian Leather Bags</a></li>
+            <li><a href="404.html">Swiss Timepieces</a></li>
+            <li><a href="404.html">Maison Fragrances</a></li>
+            <li><a href="404.html">Luxury Skincare</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care & Contact -->
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="ri-map-pin-2-line"></i>
+              <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+            </div>
+            <div class="contact-item">
+              <i class="ri-phone-line"></i>
+              <a href="tel:9876543210" style="color: inherit;">9876543210</a>
+            </div>
+            <div class="contact-item">
+              <i class="ri-mail-send-line"></i>
+              <a href="mailto:info@stackly.com" style="color: inherit;">info@stackly.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="ri-time-line"></i>
+              <span>Mon - Sat: 9:00 AM - 8:00 PM IST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Slide-Over Drawers: Cart, Wishlist, Mobile Navigation
+       ========================================================================== -->
+  <!-- Shared Backdrop for Drawers -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeAllDrawers()"></div>
+
+  <!-- 1. Shopping Bag Slide-Over Drawer -->
+  <div class="drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3><i class="ri-shopping-bag-3-line"></i> Shopping Bag</h3>
+      <button class="drawer-close" onclick="closeDrawer('cartDrawer')" aria-label="Close cart">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Meter -->
+    <div style="padding: 16px 28px 0 28px;">
+      <div id="cartShippingMeter" class="shipping-meter"></div>
+    </div>
+
+    <div class="drawer-content">
+      <!-- Empty Bag State -->
+      <div id="cartEmptyState" class="empty-state">
+        <i class="ri-shopping-bag-2-line"></i>
+        <h4>Your Shopping Bag is Empty</h4>
+        <p>Explore our exquisite runway pieces and add your favorites.</p>
+        <a href="404.html" class="btn btn-primary btn-sm" onclick="closeDrawer('cartDrawer')">Start Shopping</a>
+      </div>
+
+      <!-- Cart Items List Container -->
+      <div id="cartItemsList" class="drawer-items-list"></div>
+    </div>
+
+    <!-- Drawer Footer: Coupon, Totals & Checkout Button -->
+    <div class="drawer-footer" id="cartFooter">
+      <div id="cartAppliedCouponBox"></div>
+
+      <!-- Coupon Input -->
+      <div class="coupon-box">
+        <input type="text" id="cartCouponInput" placeholder="Promo code (e.g. LUXE20)">
+        <button class="btn btn-sm btn-primary" onclick="cart.applyCoupon(document.getElementById('cartCouponInput').value)">Apply</button>
+      </div>
+
+      <!-- Calculation Totals -->
+      <div class="drawer-totals">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="total-row" id="cartDiscountRow" style="display: none; color: var(--success);">
+          <span>Promo Discount:</span>
+          <span id="cartDiscount">-$0.00</span>
+        </div>
+        <div class="total-row">
+          <span>Estimated Shipping:</span>
+          <span id="cartShipping">$15.00</span>
+        </div>
+        <div class="total-row">
+          <span>Estimated Tax (5%):</span>
+          <span id="cartTax">$0.00</span>
+        </div>
+        <div class="total-row final">
+          <span>Grand Total:</span>
+          <span id="cartGrandTotal">$0.00</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        Proceed to Secure Checkout <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 2. Wishlist Slide-Over Drawer -->
+  <div class="drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <h3><i class="ri-heart-3-line"></i> Saved Wishlist</h3>
+      <button class="drawer-close" onclick="closeDrawer('wishlistDrawer')" aria-label="Close wishlist">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <div class="drawer-content">
+      <!-- Empty Wishlist State -->
+      <div id="wishlistEmptyState" class="empty-state">
+        <i class="ri-heart-line"></i>
+        <h4>Your Wishlist is Empty</h4>
+        <p>Save items you love by tapping the heart icon on any product.</p>
+        <a href="404.html" class="btn btn-primary btn-sm" onclick="closeDrawer('wishlistDrawer')">Discover Items</a>
+      </div>
+
+      <!-- Wishlist Items List Container -->
+      <div id="wishlistItemsList" class="drawer-items-list"></div>
+    </div>
+  </div>
+
+  <!-- 3. Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo" aria-label="Homepage">
+        <img src="assets/logo_0967.webp" alt="Stackly Fashion Logo" class="brand-logo-img" style="height: 36px;">
+      </a>
+      <button class="drawer-close" onclick="closeDrawer('mobileNavDrawer')" aria-label="Close mobile menu">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+
+    <div class="mobile-menu-links">
+      <a href="index.html" onclick="closeDrawer('mobileNavDrawer')">Home</a>
+      <a href="#categoriesSection" onclick="closeDrawer('mobileNavDrawer')">Categories</a>
+      <a href="#newArrivalsSection" onclick="closeDrawer('mobileNavDrawer')">New Arrivals</a>
+      <a href="#atelierSection" onclick="closeDrawer('mobileNavDrawer')">Atelier</a>
+      <a href="#editorialSection" onclick="closeDrawer('mobileNavDrawer')">Journal</a>
+      <a href="#offersSection" onclick="closeDrawer('mobileNavDrawer')">Special Offers</a>
+      <a href="404.html" onclick="closeDrawer('mobileNavDrawer')">Lookbook (404 Page)</a>
+      <button class="btn btn-primary btn-sm" onclick="closeDrawer('mobileNavDrawer'); openAuthModal();" style="width: 100%; margin-top: 14px;">
+        <i class="ri-user-3-line"></i> <span id="mobileLoginText">Account Login</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       Modals: Quick View, Checkout & Authentication Modal
+       ========================================================================== -->
+  <!-- 3. Account / Login Modal -->
+  <div class="modal-backdrop" id="authModal" onclick="if(event.target === this) closeModal('authModal')">
+    <div class="modal-card" style="max-width: 460px; padding: 36px 32px;">
+      <button class="modal-close" onclick="closeModal('authModal')" aria-label="Close modal">
+        <i class="ri-close-line"></i>
+      </button>
+      <div id="authModalContent">
+        <!-- Rendered dynamically by modal.js -->
+      </div>
+    </div>
+  </div>
+  <!-- 1. Product Quick View Modal -->
+  <div class="modal-backdrop" id="quickViewModal" onclick="if(event.target === this) closeModal('quickViewModal')">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('quickViewModal')" aria-label="Close modal">
+        <i class="ri-close-line"></i>
+      </button>
+      <div id="quickViewContent">
+        <!-- Rendered dynamically via window.openQuickView(productId) -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Checkout & Order Confirmation Modal -->
+  <div class="modal-backdrop" id="checkoutModal" onclick="if(event.target === this) closeModal('checkoutModal')">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('checkoutModal')" aria-label="Close modal">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="checkout-modal-content" id="checkoutContentContainer">
+        <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 24px;">Checkout &amp; Order Placement</h2>
+        <div class="checkout-grid">
+          <!-- Shipping & Billing Form -->
+          <form id="checkoutOrderForm" onsubmit="handleCheckoutSubmit(event)">
+            <h4 style="font-size: 1.1rem; margin-bottom: 16px; font-weight: 700;">1. Shipping Information</h4>
+            
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Marie Antoinette" required value="Eleanor Vance">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="name@domain.com" required value="eleanor.vance@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" name="address" placeholder="128 Rue de la Paix" required value="742 Evergreen Terrace">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Paris" required value="Paris">
+              </div>
+              <div class="form-group">
+                <label for="zip">Postal Code</label>
+                <input type="text" id="zip" name="zip" placeholder="75001" required value="75001">
+              </div>
+            </div>
+
+            <h4 style="font-size: 1.1rem; margin: 24px 0 16px 0; font-weight: 700;">2. Payment Method</h4>
+            <div class="form-group">
+              <select name="paymentMethod" class="form-group select" style="width: 100%; padding: 12px; border: 1px solid var(--border-medium); border-radius: var(--radius-sm);">
+                <option value="Credit Card">Credit / Debit Card (Visa, Mastercard, Amex)</option>
+                <option value="PayPal">PayPal Express</option>
+                <option value="Apple Pay">Apple Pay</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+              Place Luxury Order
+            </button>
+          </form>
+
+          <!-- Order Summary Sidebar -->
+          <div id="checkoutSummaryBox"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==========================================================================
+       Third-Party Libraries & Application Scripts
+       ========================================================================== -->
+  <!-- AOS (Animate on Scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Canvas-Confetti (For celebratory order confirmation) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Modular Application Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
